@@ -1,0 +1,30 @@
+.card {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.card button {
+  font-size: 14px;
+  padding: 5px 10px;
+  background-color: #dddddd;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #cccccc;
+}

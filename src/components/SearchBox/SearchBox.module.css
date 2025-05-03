@@ -1,0 +1,22 @@
+.searchBox {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-width: 300px;
+}
+
+.searchBox label {
+  font-weight: bold;
+}
+
+.searchBox input {
+  font-size: 14px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.searchBox input:focus {
+  box-shadow: 0 0 3px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
