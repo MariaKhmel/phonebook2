@@ -13,6 +13,6 @@ const rootReducer = (state = initialState, action) => {
   return state;
 };
 
-export store = configureStore({
+export const store = configureStore({
   reducer: rootReducer,
 })
