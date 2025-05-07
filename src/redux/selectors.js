@@ -1,5 +1,5 @@
 
-const items = state => state.contacts.items;
+const contacts = state => state.contacts.items;
 const filters = state => state.filters.name;
 
-export { items, filters };
+export { contacts, filters };
