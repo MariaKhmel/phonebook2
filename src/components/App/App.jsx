@@ -4,7 +4,7 @@ import SearchBox from "../SearchBox/SearchBox";
 import initialContacts from "../../data/contacts";
 import css from "./App.module.css";
 import { useEffect, useState } from "react";
-import { addContact, deleteContact } from "../updateContacts";
+import { addContact, deleteContact } from "../../js/updateContacts";
 
 const LS_KEY = "contacts";
 
