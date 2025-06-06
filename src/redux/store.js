@@ -1,8 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
+import initialContacts from "../data/contacts";
 
 const initialState = {
   contacts: {
-    items: []
+    items: initialContacts
   },
   filters: {
     name: ""
