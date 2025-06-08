@@ -3,18 +3,30 @@ import ContactList from "../ContactList/ContactList";
 import SearchBox from "../SearchBox/SearchBox";
 import initialContacts from "../../data/contacts";
 import css from "./App.module.css";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { addContact, deleteContact } from "../../js/updateContacts";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { selectContacts, selectFilters } from "../../redux/selectors";
 
 const LS_KEY = "contacts";
 
 function App() {
+  const dispatch = useDispatch();
   // const [contacts, setContacts] = useState(initialContacts);
   const contacts = useSelector(selectContacts);
   // const [filterValue, setFilterValue] = useState("");
   const filterValue = useSelector(selectFilters);
+  const setContacts = (contacts) =>
+    dispatch({
+      type: "SET_CONTACTS",
+      payload: contacts,
+    });
+
+  const setFilterValue = (filter) =>
+    dispatch({
+      type: "SET_FILTER_VALUE",
+      payload: filter,
+    });
 
   useEffect(() => {
     const contacts = localStorage.getItem(LS_KEY);
