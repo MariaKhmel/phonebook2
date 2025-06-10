@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import { addContact, deleteContact } from "../../js/updateContacts";
 import { useDispatch, useSelector } from "react-redux";
 import { selectContacts, selectFilters } from "../../redux/selectors";
+import { setFilter, setContacts } from "../../redux/actions";
 
 const LS_KEY = "contacts";
 
@@ -14,17 +15,9 @@ function App() {
   const dispatch = useDispatch();
   const contacts = useSelector(selectContacts);
   const filterValue = useSelector(selectFilters);
-  const setContacts = (contacts) =>
-    dispatch({
-      type: "SET_CONTACTS",
-      payload: contacts,
-    });
+  const setContactsList = (contacts) => dispatch(setContacts(contacts));
 
-  const setFilterValue = (filter) =>
-    dispatch({
-      type: "SET_FILTER_VALUE",
-      payload: filter,
-    });
+  const setFilterValue = (filter) => dispatch(setFilter(filter));
 
   useEffect(() => {
     const contacts = localStorage.getItem(LS_KEY);
@@ -45,7 +38,7 @@ function App() {
     addContact(contact, setContacts);
   };
   const handleDeleteContact = (contactId) => {
-    deleteContact(contactId, setContacts);
+    deleteContact(contactId, setContactsList);
   };
 
   return (

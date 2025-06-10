@@ -1,13 +1,13 @@
-export const addTask = newTask => {
+export const setContacts = contacts => {
   return {
-    type: "tasks/addTask",
-    payload: newTask
+    type: "contacts/setContacts",
+    payload: contacts
   };
 };
 
-export const deleteTask = taskId => {
+export const setFiltersetFilter = taskId => {
   return {
-    type: "tasks/deleteTask",
+    type: "filter/setFilter",
     payload: taskId,
   };
 };
