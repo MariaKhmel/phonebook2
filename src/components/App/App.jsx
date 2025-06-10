@@ -12,9 +12,7 @@ const LS_KEY = "contacts";
 
 function App() {
   const dispatch = useDispatch();
-  // const [contacts, setContacts] = useState(initialContacts);
   const contacts = useSelector(selectContacts);
-  // const [filterValue, setFilterValue] = useState("");
   const filterValue = useSelector(selectFilters);
   const setContacts = (contacts) =>
     dispatch({
