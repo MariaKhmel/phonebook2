@@ -1,13 +1,5 @@
-export const setContacts = contacts => {
-  return {
-    type: "contacts/setContacts",
-    payload: contacts
-  };
-};
+import { createAction } from "@reduxjs/toolkit";
 
-export const setFiltersetFilter = taskId => {
-  return {
-    type: "filter/setFilter",
-    payload: taskId,
-  };
-};
+export const setContacts = createAction("contacts/setContacts");
+
+export const setFilter = createAction("filter/setFilter");
